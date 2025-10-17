@@ -1,0 +1,21 @@
+.checkout-card {
+  width: 600pxpx;
+  margin: 60px auto;
+  padding: 10px;
+  justify-content: center;
+  height: 300px;
+  padding: 10px;
+}
+
+.full-width {
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px;
+  
+}
+
+.button-container {
+  text-align: right;
+  
+}
+

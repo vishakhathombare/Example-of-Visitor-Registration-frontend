@@ -1,0 +1,11 @@
+.dialog-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mat-mdc-button-base .mat-icon {
+    font-size: 32px; /* Increase this value as needed */
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}

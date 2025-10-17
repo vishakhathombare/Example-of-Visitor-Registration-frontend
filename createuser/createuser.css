@@ -1,0 +1,42 @@
+.create-user-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+mat-form-field.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+h2[mat-dialog-title] {
+  margin-bottom: 24px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #3f51b5;
+  text-align: center;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button[mat-raised-button] {
+  min-width: 100px;
+}
+
+.mat-form-field-required-marker {
+  color: red !important;
+}
+
+@media (max-width: 600px) {
+  .create-user-card {
+    margin: 20px;
+    padding: 16px;
+  }
+}

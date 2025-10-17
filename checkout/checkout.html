@@ -1,0 +1,29 @@
+
+<mat-card class="checkout-card">
+  <mat-card-title>Visitor Checkout</mat-card-title>
+  <mat-card-content >
+    <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput placeholder="firstName" formControlName="firstName" required />
+        <mat-error *ngIf="checkoutForm.get('firstName')?.hasError('required')">
+          First Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder="lastName" formControlName="lastName" required />
+        <mat-error *ngIf="checkoutForm.get('lastName')?.hasError('required')">
+          Last Name is required
+        </mat-error>
+      </mat-form-field>
+
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit" [disabled]="checkoutForm.invalid">
+          Checkout
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

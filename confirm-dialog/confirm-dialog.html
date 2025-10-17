@@ -1,0 +1,12 @@
+<mat-card class="dialog-card">
+  <h2 mat-dialog-title class="center-text">Confirm Logout</h2>
+
+  <mat-dialog-content class="center-content">
+    <p>{{ data.message }}</p>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="center-actions">
+    <button mat-button (click)="onNoClick()" color="warn">No</button>
+    <button mat-raised-button (click)="onYesClick()" color="primary">Yes</button>
+  </mat-dialog-actions>
+</mat-card>

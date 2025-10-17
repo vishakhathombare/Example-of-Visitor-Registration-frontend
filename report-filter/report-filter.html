@@ -1,0 +1,29 @@
+
+<form [formGroup]="reportForm" class="report-form" >
+  <mat-form-field appearance="fill">
+    <mat-label>Report Type</mat-label>
+    <mat-select formControlName="reportType" required>
+      <mat-option value="list of visitors">list of visitors</mat-option>
+      <mat-option value="VIP visitors">VIP visitors</mat-option>
+      <mat-option value="checked in visitors">checked in Visitors</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>From Date</mat-label>
+    < matInput [matDatepicker]="fromPicker" formControlName="fromDate" required>
+    <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+    <mat-datepicker #fromPicker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>To Date</mat-label>
+    < matInput [matDatepicker]="toPicker" formControlName="toDate" required>
+    <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+    <mat-datepicker #toPicker></mat-datepicker>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="reportForm.invalid">
+    View Report
+  </button>
+</form>

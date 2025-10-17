@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-content>
+    <h2 mat-dialog-title>Check In</h2>
+
+    <form [formGroup]="checkInForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Login ID</mat-label>
+        <input matInput formControlName="loginId"  />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required />
+      </mat-form-field>
+
+      <!-- <mat-form-field appearance="fill">
+        <mat-label>UserType</mat-label>
+        <mat-select formControlName="userType">
+          <mat-option value="Admin">Admin</mat-option>
+          <mat-option value="Security">Security</mat-option>
+          <mat-option value="User">User</mat-option>
+        </mat-select>
+      </mat-form-field> -->
+
+      <div mat-dialog-actions align="end">
+        <button mat-raised-button color="primary" (click)="oncheckin()">Check In</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,26 @@
+.dialog-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 24px;
+}
+
+.center-text {
+  text-align: center;
+  width: 100%;
+}
+
+.center-content {
+  text-align: center;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.center-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 20px;
+}

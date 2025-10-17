@@ -1,0 +1,63 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-title {
+  margin-left: 8px;
+  font-weight: 500;
+}
+mat-icon {
+  vertical-align: middle;
+}
+
+button[mat-menu-item] mat-icon {
+  margin-right: 8px;
+  margin-top: 10px;
+}
+
+.c-padding{
+  padding: 15px;
+  overflow: auto !important;
+}
+.profile-icon {
+  font-size: 36px;       
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+}
+/* Resize the entire button */
+.profile-button {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border-radius: 50%; /* Make the ripple circle centered and round */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Resize the icon inside */
+.profile-icon {
+  font-size: 32px; /* or 36px — adjust as needed */
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+

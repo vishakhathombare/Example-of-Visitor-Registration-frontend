@@ -1,0 +1,51 @@
+<mat-card class="create-user-card">
+  <mat-card-content>
+    <h2 mat-dialog-title>Create User</h2>
+
+    <form [formGroup]="userForm">
+      <!-- Login ID -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Login ID</mat-label>
+        <input matInput formControlName="loginId" required />
+      </mat-form-field>
+
+      <!-- Name -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" required />
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required />
+      </mat-form-field>
+
+      <!-- User Type -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>User Type</mat-label>
+        <mat-select formControlName="userType" required>
+          <mat-option *ngFor="let type of userTypes" [value]="type">
+            {{ type }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Gate -->
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Gate</mat-label>
+        <mat-select formControlName="gate" required>
+          <mat-option *ngFor="let g of gates" [value]="g">
+            {{ g }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Buttons -->
+      <div mat-dialog-actions align="end">
+        <button mat-raised-button color="primary" (click)="onCreate()">Create</button>
+        <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

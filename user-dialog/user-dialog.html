@@ -1,0 +1,47 @@
+
+
+<mat-card>
+  <mat-card-title>{{ isEditMode ? 'Edit User' : 'Create User' }}</mat-card-title>
+  
+
+  <form [formGroup]="editUserForm">
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>User ID *</mat-label>
+        <input matInput  placeholder="User ID" formControlName="loginId" [disabled]="isEditMode" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Name *</mat-label>
+        <input matInput placeholder="Name"formControlName="name" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Email *</mat-label>
+        <input matInput placeholder="email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>User Type *</mat-label>
+        <mat-select formControlName="userType">
+          <mat-option *ngFor="let type of userTypes" [value]="type">{{ type }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Gate(s) *</mat-label>
+        <mat-select formControlName="gate" multiple>
+          <mat-option *ngFor="let gate of gates" [value]="gate">{{ gate }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button matButton (click)="onCancel()">Cancel</button>
+      <button matButton color="primary" (click)="onSubmit()" [disabled]="!editUserForm.valid">
+        {{ isEditMode ? 'Update' : 'Create' }}
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
+

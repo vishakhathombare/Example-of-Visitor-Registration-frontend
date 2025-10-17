@@ -1,0 +1,14 @@
+.report-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+mat-form-field {
+  width: 200px;
+}
+
+button {
+  height: 56px;}
+

@@ -1,0 +1,34 @@
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+
+.full-width {
+  width: 100%;
+}
+mat-form-field{
+    width: 150px;
+}
+button{
+    justify-content: flex-end;
+}
+.filter-field {
+  margin-top: 80px;
+  margin-bottom: 10px;
+}
+.filter-container {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
+}
+div{
+  justify-content: space-between; 
+  margin-bottom: 16px;
+}
+.toolbar[_ngcontent-ng-c2921611419] {
+    display: flex;
+   justify-content:space-between;
+    margin-bottom: 10px;
+    height: 70px;
+}

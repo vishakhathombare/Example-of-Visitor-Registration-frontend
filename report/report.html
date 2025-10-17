@@ -1,0 +1,47 @@
+
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. klein" #input>
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    
+    <ng-container matColumnDef="visitorName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Visitor Name  </th>
+      <td mat-cell *matCellDef="let element"> {{element.visitorName}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="visitorCompany">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Company</th>
+      <td mat-cell *matCellDef="let element"> {{element.visitorCompany}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="visitorPurpose">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Purpose </th>
+      <td mat-cell *matCellDef="let element"> {{element.visitorPurpose}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="visitorSignIn">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Sign In </th>
+      <td mat-cell *matCellDef="let element"> {{element.visitorSignIn}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>
+
